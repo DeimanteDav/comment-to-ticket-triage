@@ -1,13 +1,13 @@
-package com.deimante.commenttotickettriage;
+package com.deimante.pulsedesk;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CommentToTicketTriageApplication {
+public class PulseDeskApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CommentToTicketTriageApplication.class, args);
+        SpringApplication.run(PulseDeskApplication.class, args);
     }
 
 }

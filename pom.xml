@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.deimante</groupId>
-    <artifactId>comment-to-ticket-triage</artifactId>
+    <artifactId>PulseDesk</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>comment-to-ticket-triage</name>
     <description>comment-to-ticket-triage</description>
