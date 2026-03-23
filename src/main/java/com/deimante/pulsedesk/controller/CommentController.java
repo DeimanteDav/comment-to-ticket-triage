@@ -1,6 +1,7 @@
 package com.deimante.pulsedesk.controller;
 
 import com.deimante.pulsedesk.model.Comment;
+import com.deimante.pulsedesk.model.CommentResponse;
 import com.deimante.pulsedesk.service.CommentService;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +17,7 @@ public class CommentController {
     }
 
     @PostMapping
-    public Comment submitComment(@RequestBody Comment comment) {
+    public CommentResponse submitComment(@RequestBody Comment comment) {
         return commentService.processComment(comment.getText());
     }
 
