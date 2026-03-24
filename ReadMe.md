@@ -6,6 +6,12 @@ Built as part of the IBM Internship Technical Challenge.
 
 ---
 
+## Live Demo
+
+http://pulsedesk.onrender.com
+
+---
+
 ## How It Works
 
 1. A user submits a comment via `POST /comments`
@@ -30,13 +36,15 @@ Built as part of the IBM Internship Technical Challenge.
 
 This project uses **`Qwen/Qwen3-8B`** via the Hugging Face Inference Router.
 
-> **Why not the suggested models?**
-> The task suggested `google/flan-t5-base`, `tiiuae/falcon-7b-instruct`, and `mistralai/Mistral-7B-Instruct`.
-> - `tiiuae/falcon-7b-instruct` — returns `410 Gone`, the old `api-inference.huggingface.co` endpoint is permanently deprecated
-> - `google/flan-t5-base` — has no active Inference Provider on the new router
-> - `mistralai/Mistral-7B-Instruct-v0.3` — gated model requiring individual agreement per user, which would make it hard for others to run the project
->
 > `Qwen/Qwen3-8B` is fully open, ungated, and available on the free tier — anyone can run this project with just a standard HuggingFace token.
+
+---
+
+## UI
+A simple web interface is available at the root URL:
+- Submit comments
+- View all comments
+- View all generated tickets in real time
 
 ---
 
@@ -45,13 +53,12 @@ This project uses **`Qwen/Qwen3-8B`** via the Hugging Face Inference Router.
 ### Prerequisites
 
 - Java 17+
-- Maven
 - A free [Hugging Face](https://huggingface.co) account
 
 ### 1. Clone the repository
 
 ```bash
-git https://github.com/DeimanteDav/pulsedesk.git
+git clone https://github.com/DeimanteDav/pulsedesk.git
 cd pulsedesk
 ```
 
@@ -161,6 +168,7 @@ Password: (leave blank)
 
 ```
 src/main/java/com/deimante/pulsedesk/
+├── PulseDeskApplication.java
 ├── controller/
 │   ├── CommentController.java   # POST /comments, GET /comments
 │   └── TicketController.java    # GET /tickets, GET /tickets/{id}
@@ -171,6 +179,6 @@ src/main/java/com/deimante/pulsedesk/
 │   ├── CommentRepository.java
 │   └── TicketRepository.java
 └── service/
-    ├── CommentService.java       # Orchestrates comment processing
+    ├── CommentService.java
     └── HuggingFaceService.java   # AI API calls (triage + ticket generation)
 ```
