@@ -8,7 +8,7 @@ Built as part of the IBM Internship Technical Challenge.
 
 ## Live Demo
 
-http://pulsedesk.onrender.com
+http://pulsedesk-app.onrender.com
 
 ---
 
